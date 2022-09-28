@@ -5,3 +5,13 @@
 #
 #   movies = Movie.create([{ name: "Star Wars" }, { name: "Lord of the Rings" }])
 #   Character.create(name: "Luke", movie: movies.first)
+
+15.times do
+  Product.create!(
+    name: FFaker::Product.product_name,
+    price: rand(100) / 0.5,
+    width: rand(100),
+    height: rand(100),
+    weight: rand(100),
+  )
+end

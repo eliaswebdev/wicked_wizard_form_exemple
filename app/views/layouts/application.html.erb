@@ -11,10 +11,17 @@
   </head>
 
   <body class="bg-white">
-    <header class="mb-2 shadow-sm">
+    <header class="mb-2 shadow-sm pageHeader">
       <%= render "layouts/header" %>
     </header>
     <main class="container py-2">
+      <div class="pageHeader mb-3">
+        <%= yield(:page_header) %>
+      </div>
+      <%= tag.div class: "alert alert-success alert-dismissible fade show", role: "alert" do %>
+        <%= notice || alert %>
+        <button type="button" class="btn-close" data-bs-dismiss="alert" aria-label="Close"></button>
+      <% end if flash.present? %>
       <%= yield %>
     </main>
   </body>

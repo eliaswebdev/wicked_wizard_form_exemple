@@ -41,8 +41,9 @@ class ProductsController < ApplicationController
 
   # DELETE /products/1
   def destroy
+    name = @product.name
     @product.destroy
-    redirect_to products_url, notice: "Product was successfully destroyed."
+    redirect_to products_url, notice: "Product #{name} was successfully destroyed."
   end
 
   private

@@ -76,3 +76,5 @@ gem "foreman", "~> 0.87.2"
 gem "bootstrap_form", "~> 5.1"
 
 gem "bootstrap", "~> 5.2"
+
+gem "ffaker", "~> 2.21"

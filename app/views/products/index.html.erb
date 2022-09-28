@@ -1,10 +1,11 @@
-<p style="color: green"><%= notice %></p>
+<% content_for :page_header do %>
+  <h1>Products</h1>
+  <%= link_to "New product", new_product_path, class: 'btn btn-primary' %>
+<% end %>
 
-<h1>Products</h1>
-
-<table id="products" class="table">
+<table id="products" class="table table-striped">
   <thead>
-    <tr>
+    <tr class="text-center">
       <th>id</th>
       <th>name</th>
       <th>price</th>
@@ -21,4 +22,3 @@
   </tbody>
 </div>
 
-<%= link_to "New product", new_product_path %>
