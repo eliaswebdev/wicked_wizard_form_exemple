@@ -19,10 +19,18 @@
         <%= yield(:page_header) %>
       </div>
       <%= tag.div class: "alert alert-success alert-dismissible fade show", role: "alert" do %>
-        <%= notice || alert %>
+        <%= notice&.html_safe || alert&.html_safe %>
         <button type="button" class="btn-close" data-bs-dismiss="alert" aria-label="Close"></button>
       <% end if flash.present? %>
+
+      <%= turbo_frame_tag "modal" %>
       <%= yield %>
     </main>
+    <!-- dynamicModal -->
+    <div class="modal fade" id="dynamicModal" tabindex="-1" role="dialog" aria-labelledby="dynamicModalLabel" aria-hidden="true">
+      <div class="modal-dialog modal-dialog-centered" role="document">
+        <div class="modal-content"></div>
+      </div>
+    </div>
   </body>
 </html>

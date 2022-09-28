@@ -24,7 +24,7 @@ class ProductsController < ApplicationController
     @product = Product.new(product_params)
 
     if @product.save
-      redirect_to @product, notice: "Product was successfully created."
+      redirect_to products_url, notice: "Product <strong>#{@product.id}</strong> was successfully created."
     else
       render :new, status: :unprocessable_entity
     end
@@ -33,7 +33,7 @@ class ProductsController < ApplicationController
   # PATCH/PUT /products/1
   def update
     if @product.update(product_params)
-      redirect_to @product, notice: "Product was successfully updated."
+      redirect_to products_url, notice: "Product <strong>#{@product.id}</strong> was successfully updated."
     else
       render :edit, status: :unprocessable_entity
     end
@@ -43,7 +43,7 @@ class ProductsController < ApplicationController
   def destroy
     name = @product.name
     @product.destroy
-    redirect_to products_url, notice: "Product #{name} was successfully destroyed."
+    redirect_to products_url, notice: "Product <strong>#{name}</strong> was successfully destroyed."
   end
 
   private

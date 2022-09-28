@@ -6,4 +6,6 @@
   </div>
 <% end %>
 
-<%= render "form", product: @product %>
+<%= turbo_frame_tag "modal" do %>
+  <%= render "form", product: @product %>
+<% end %>

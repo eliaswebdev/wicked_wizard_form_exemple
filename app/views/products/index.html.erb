@@ -1,6 +1,6 @@
 <% content_for :page_header do %>
   <h1>Products</h1>
-  <%= link_to "New product", new_product_path, class: 'btn btn-primary' %>
+  <%= link_to "New product", new_product_path, class: 'btn btn-primary', data: { turbo_frame: 'modal' } %>
 <% end %>
 
 <table id="products" class="table table-striped">

@@ -1,0 +1,18 @@
+<%= bootstrap_form_for(@product, remote: true) do |f| %>
+  <div class="modal-header">
+    <h5 class="modal-title" id="dynimicModalLabel">
+      Cadastar Produto
+    </h5>
+    <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+  </div>
+  <div class="modal-body">
+    <%= f.text_field :name %>
+    <%= f.text_field :price %>
+    <%= f.text_field :width %>
+    <%= f.text_field :height %>
+    <%= f.text_field :weight %>
+  <div class="modal-footer justify-content-center">
+    <%= f.submit nil, class: 'btn btn-primary', data: {disable_with: 'Salvando...'} %>
+    <button type="button" class="btn btn-secondary border" data-bs-dismiss="modal" aria-label="Close"><%= t('.cancel', default: t("helpers.links.cancel")) %></button>
+  </div>
+<% end %>
