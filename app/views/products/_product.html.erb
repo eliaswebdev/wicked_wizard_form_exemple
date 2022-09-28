@@ -1,0 +1,31 @@
+<tr id="<%= dom_id product %>">
+  <td>
+    <%= product.id %>
+  </td>
+  <td>
+    <%= product.name %>
+  </td>
+
+  <td>
+    <%= product.price %>
+  </td>
+
+  <td>
+    <%= product.width %>
+  </td>
+
+  <td>
+    <%= product.height %>
+  </td>
+
+  <td>
+    <%= product.weight %>
+  </td>
+
+  <td nowrap class="d-flex justify-content-around">
+    <%= link_to "Show", product, class: 'btn btn-info' %>
+    <%= link_to "Edit", edit_product_path(product), class: 'btn btn-primary' %>
+    <%= link_to "Destroy", product, method: :delete, class: 'btn btn-danger', data: { confirm: 'Are you sure?' } %>
+    <%= button_to "Destroy", product, method: :delete, class: 'btn btn-danger', form: {data: {turbo_confirm: 'Are you sure?'}} %>
+  </td>
+</tr>
