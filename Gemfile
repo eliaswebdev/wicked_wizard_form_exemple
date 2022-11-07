@@ -78,3 +78,9 @@ gem "bootstrap_form", "~> 5.1"
 gem "bootstrap", "~> 5.2"
 
 gem "ffaker", "~> 2.21"
+
+gem "wicked", "~> 2.0"
+
+# gem "wicked", "~> 1.4"
+
+# gem "wicked-wizard-validations", "~> 0.0.3"

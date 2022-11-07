@@ -1,0 +1,6 @@
+<h3 class="text-success">Passo 2</h3>
+<%= bootstrap_form_for @partner, url: wizard_path, method: :put do |f| %>
+  <%= f.text_field :city %>
+
+  <%= render 'partner_steps/controls', f: f %>
+<% end %>

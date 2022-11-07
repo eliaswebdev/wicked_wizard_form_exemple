@@ -1,0 +1,5 @@
+<div class="text-end">
+  <%= link_to 'Voltar', previous_wizard_path, class: 'btn btn-outline-primary' if @step != 'passo_1' %>
+  <%= f.submit "Próximo", class: 'btn btn-primary' if @step != 'finish' %>
+  <%#= link_to 'Avançar', next_wizard_path, class: 'btn btn-primary' %>
+</div>

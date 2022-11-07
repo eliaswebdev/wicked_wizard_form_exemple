@@ -1,0 +1,9 @@
+<%= link_to 'Novo', new_partner_path %>
+
+<ul>
+  <% @partners.each do |partner|%>
+  <li>
+    <%= link_to partner.name, edit_partner_path(partner) %>
+  </li>
+  <% end %>
+</ul>
